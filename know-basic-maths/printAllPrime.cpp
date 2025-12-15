@@ -17,6 +17,19 @@ public:
         return true;
     }
 
+    vector<int> printAllPrimesUpToN(int n)
+    {
+        vector<int>primes;
+
+        for(int i = 2; i <= n; i++){
+            if(isPrime(i)){
+                primes.push_back(i);
+            }
+        }
+
+        return primes;
+    }
+
 };
 int32_t main()
 {
@@ -30,10 +43,10 @@ int32_t main()
     while (t--)
     {
         Solution obj;
-        int n;cin>>n;
+        int n; cin >> n;
 
-        cout<< obj.isPrime(n);
-        cout<<endl;
+        vector <int> res = obj.printAllPrimesUpToN(n);
+        for(int prime: res)cout << prime << " "; cout << endl;
         
     }
 
