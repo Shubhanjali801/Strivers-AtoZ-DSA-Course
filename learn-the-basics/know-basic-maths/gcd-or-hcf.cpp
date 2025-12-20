@@ -9,7 +9,7 @@ class Solution
 public:
     int findGcd1(int a, int b)
     {
-
+        
         int gcd = 1;
 
         for (int i = 1; i <= min(a, b); ++i)
